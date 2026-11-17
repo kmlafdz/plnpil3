@@ -1,0 +1,37 @@
+{
+  "name": "pln-corpu-eval3",
+  "version": "1.0.0",
+  "description": "Sistem Evaluasi Level 3 PIL UP3 Metro - Penurunan Susut Distribusi",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js",
+    "deploy:firebase": "npm run build && firebase deploy",
+    "deploy:hosting": "npm run build && firebase deploy --only hosting",
+    "build": "node scripts/build-cloudflare-assets.js",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
+  },
+  "keywords": [
+    "pln",
+    "evaluasi-level-3",
+    "up3-metro"
+  ],
+  "author": "PLN Corporate University",
+  "license": "ISC",
+  "dependencies": {
+    "@simplewebauthn/browser": "^14.0.0",
+    "@simplewebauthn/server": "^14.1.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.3",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "wrangler": "^4.157.0"
+  }
+}

@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Izinkan baca & tulis untuk seluruh koleksi sistem evaluasi PLN Corpu Level 3
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

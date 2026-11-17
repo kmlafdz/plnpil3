@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pln-pil-3",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-03",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  }
+  // Setelah membuat Hyperdrive config (langkah di panduan), aktifkan blok di bawah ini:
+  // ,"hyperdrive": [
+  //   {
+  //     "binding": "HYPERDRIVE",
+  //     "id": "<ISI_HYPERDRIVE_ID_ANDA>"
+  //   }
+  // ]
+}

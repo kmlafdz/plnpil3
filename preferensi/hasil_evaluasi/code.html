@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-low":"#eff4ff","surface-container":"#e5eeff","on-tertiary-fixed":"#001f25","on-primary-fixed-variant":"#004e59","on-secondary-fixed-variant":"#354959","surface-variant":"#d3e4fe","surface-container-highest":"#d3e4fe","primary-fixed":"#9fefff","tertiary-fixed-dim":"#6ad5e9","on-secondary-container":"#536778","secondary":"#4d6171","primary":"#006876","inverse-primary":"#46d8ef","on-tertiary-fixed-variant":"#004e59","on-primary-container":"#004d57","on-secondary-fixed":"#081d2c","primary-fixed-dim":"#46d8ef","error":"#ba1a1a","tertiary-container":"#53c1d5","on-tertiary-container":"#004c57","outline":"#6c797c","on-primary":"#ffffff","tertiary-fixed":"#a0efff","surface-container-high":"#dce9ff","on-primary-fixed":"#001f24","inverse-surface":"#213145","secondary-fixed-dim":"#b4c9dc","secondary-fixed":"#d0e5f9","tertiary":"#006876","error-container":"#ffdad6","on-error-container":"#93000a","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","secondary-container":"#d0e5f9","surface":"#f8f9ff","on-error":"#ffffff","on-surface-variant":"#3c494c","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","surface-tint":"#006876","surface-bright":"#f8f9ff","on-background":"#0b1c30","on-secondary":"#ffffff","primary-container":"#23c4db","outline-variant":"#bbc9cc","background":"#f8f9ff","surface-dim":"#cbdbf5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"1.5rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin":"1rem","space-xl":"1.5rem","space-xs":"0.25rem","space-md":"0.75rem","space-lg":"1rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"tabular-data":["Inter"],"headline-md":["Inter"]},"fontSize":{"headline-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"tabular-data":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-[#172B3A] z-50 flex flex-col justify-between border-r border-[#223d52]"><div class="flex flex-col"><div class="px-space-xl pt-space-xl pb-space-lg border-b border-[#223d52]"><div class="flex items-center gap-space-md"><img alt="Logo Evaluasi Level 3 UP3 Metro" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5TigTPwwY88YwxSgoy9suYP5sv0ofGYzDD5tx7lBSwaL43mvYpOnUjJNomhHpt_xPoLSLyYaK5zxIFFsO3vdADYEpDcDblFCFG6ReX6qAIMWsyhmNEtnjzfs3reCvoCcI5GQnJlNxiODJIJBXb8QWwOLgvv49-IeBmUh5cqnoRNyjo7FhXqk1B1FpL8xz3Cnk8hsYt6txyP47TUIJPhy4qrsmvvgOBO8h9_vUmkY-oksHArewN4MRBWc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold tracking-tight leading-tight">Evaluasi Level 3</span><span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider font-semibold">PIL UP3 Metro</span></div></div><div class="mt-space-md pt-space-sm flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary-fixed-dim font-medium">Administrator UP3</span><span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-[#1b3d4d] border border-primary-container/40 text-primary-fixed text-[10px] font-semibold tracking-wide uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>Aktif</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-secondary-fixed-dim/70 uppercase tracking-wider font-semibold">Menu Utama</div><nav class="mt-space-xs flex flex-col gap-0.5" data-active-classes="bg-[#1E384D] text-primary-container border-l-[3px] border-primary-container font-semibold"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="periode-evaluasi" href="#"><span class="material-symbols-outlined text-[18px]">date_range</span><span>Periode Evaluasi</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="data-responden" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Data Responden</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="penugasan-penilai" href="#"><span class="material-symbols-outlined text-[18px]">assignment_ind</span><span>Penugasan Penilai</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="progres-pengisian" href="#"><span class="material-symbols-outlined text-[18px]">donut_large</span><span>Progres Pengisian</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg transition-colors bg-[#1E384D] text-primary-container border-l-[3px] border-primary-container font-semibold" data-path="hasil-evaluasi" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Hasil Evaluasi</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="laporan" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span>Laporan</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-secondary-fixed-dim hover:bg-[#1E384D] hover:text-surface-container-lowest transition-colors border-l-[3px] border-transparent font-headline-sm text-headline-sm" data-path="pengaturan" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Pengaturan</span></a></nav></div></div><div class="p-space-lg border-t border-[#223d52] bg-[#12222e]"><div class="flex flex-col gap-1"><div class="flex items-center gap-space-xs text-secondary-fixed-dim"><span class="material-symbols-outlined text-[15px] text-primary-container">domain</span><span class="font-label-sm text-label-sm font-semibold tracking-wide text-surface-container-lowest">PLN UID Lampung</span></div><div class="font-body-sm text-body-sm text-secondary-fixed-dim pl-5">UP3 Metro</div><div class="mt-space-xs pt-space-xs border-t border-[#223d52]/60 flex items-center justify-between text-[10px] text-secondary-fixed-dim/80"><span class="font-mono">v2.4.0 Enterprise</span><span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span></div></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest border-b border-[#E2E8F0] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md"><span>Beranda</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span>Administrator</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-on-surface font-semibold">Operasional</span></div><span class="h-4 w-[1px] bg-[#E2E8F0]"></span><div class="inline-flex items-center gap-1.5 px-space-md py-1 bg-surface-container-low text-primary rounded-lg border border-primary/20 font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[14px]">event_available</span><span>Periode Q1-Q2 2024</span></div></div><div class="flex items-center gap-space-lg"><div class="relative hidden xl:flex items-center"><span class="material-symbols-outlined absolute left-space-md text-secondary text-[18px]">search</span><input class="w-64 pl-9 pr-8 py-1.5 bg-surface rounded-lg border border-outline-variant font-body-sm text-body-sm text-on-surface placeholder:text-secondary/70 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20" placeholder="Cari NIP, nama peserta, atau unit..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-secondary font-mono border border-outline-variant/60">⌘K</kbd></div><div class="flex items-center gap-1.5 px-space-md py-1.5 bg-surface-container-lowest border border-outline-variant rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-low cursor-pointer transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_month</span><span>Q1-Q2 2024</span><span class="material-symbols-outlined text-[16px] text-secondary">expand_more</span></div><button class="relative p-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><span class="h-6 w-[1px] bg-[#E2E8F0]"></span><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjvcennt2Jk5LMZSKplm4Qg9HhV3HDpxe2KGnADXbRJIqKLG-9BbLHmPP4LZppSTeeO-hHmVwVJRHShFQHz51DDUV3JQJ16ZH5gZvsrEzzT-w1qK8QR_V_KeBdL-Pix0UfULvdraUhzA3zRVWeUVCs6XdtE4YaV5vlh2jYs4bVgUC_nHCrlpF4V55xd2VkIg5udcooLIIY20iLTaUD5Gy__QXTQtMzeWQ4bFVCMUyVSQv2FlARxES1"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Siti Rahmawati, S.T.</span><span class="font-label-sm text-label-sm text-secondary leading-tight">Admin SDM &amp; Pembelajaran</span></div><span class="material-symbols-outlined text-[18px] text-secondary cursor-pointer">expand_more</span></div></div></header><main class="w-full pt-16 bg-[#F5F7F9] min-h-screen p-margin-desktop"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-lg mb-space-xl bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+          Pelaporan Kirkpatrick Level 3
+        </span>
+<span class="font-label-sm text-label-sm text-secondary">ID Sesi: METRO-L3-2024-H1</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+        Hasil &amp; Analitik Evaluasi Level 3
+      </h1>
+<p class="font-body-md text-body-md text-secondary">
+        Analisis transfer pembelajaran per indikator perilaku, komparasi tri-perspektif, dan distribusi skor kompetensi pasca-diklat UP3 Metro.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md mt-space-lg lg:mt-0">
+<div class="relative inline-flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-secondary text-[18px]">calendar_today</span>
+<select class="pl-8 pr-8 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg appearance-none cursor-pointer focus:outline-none">
+<option selected="" value="2024-1">Periode: Semester I 2024</option>
+<option value="2023-2">Periode: Semester II 2023</option>
+<option value="2023-1">Periode: Semester I 2023</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-secondary text-[16px] pointer-events-none">arrow_drop_down</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" id="btn-export-excel">
+<span class="material-symbols-outlined text-[17px] text-primary">table_view</span>
+<span>Ekspor Excel (XLSX)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-tertiary-container transition-all shadow-sm" id="btn-export-pdf">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Ekspor Laporan PDF</span>
+</button>
+</div>
+</div>
+<!-- Executive Score Summary Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl">
+<!-- Card 1: Overall Average -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Skor Rata-rata Keseluruhan</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-[32px] leading-none text-on-surface font-bold">3.42</span>
+<span class="font-body-sm text-body-sm text-secondary">/ 4.00</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Sangat Efektif (85.5%)
+        </span>
+<span class="font-body-sm text-body-sm text-secondary">Kriteria ≥ 3.25</span>
+</div>
+</div>
+<!-- Card 2: Discrepancy Gap -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Gap Persepsi (Discrepancy)</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-[32px] leading-none text-on-surface font-bold">0.24</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SELISIH GAP</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">compare_arrows</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Peserta (Self): <strong class="text-on-surface">3.56</strong></span>
+<span>Atasan: <strong class="text-on-surface">3.32</strong></span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 24%"></div>
+</div>
+</div>
+</div>
+<!-- Card 3: Evaluasi Lengkap & Valid -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Evaluasi Valid &amp; Lengkap</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-[32px] leading-none text-on-surface font-bold">84</span>
+<span class="font-body-sm text-body-sm text-secondary">Berkas (65.6%)</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">task_alt</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary">Tri-Triangulasi Terverifikasi</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tersertifikasi P2TL</span>
+</div>
+</div>
+<!-- Card 4: Pending / Tidak Dihitung Nol -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Data Belum Lengkap / Pending</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-[32px] leading-none text-on-surface font-bold">44</span>
+<span class="font-body-sm text-body-sm text-secondary">Berkas (34.4%)</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-outline">info</span>
+<span>Eksklusi dari skor rata-rata (tidak dinolkan)</span>
+</div>
+</div>
+</div>
+<!-- Tri-Perspective Visual & Breakdown Section -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-lg mb-space-lg gap-2">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Komparasi Tri-Perspektif per Bagian Modul</h2>
+<p class="font-body-md text-body-md text-secondary">Perbandingan agregat skor antara penilaian mandiri pegawai (Peserta), Atasan Langsung, dan Koordinator Lapangan.</p>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-3 h-3 rounded-sm bg-primary-container inline-block"></span>
+<span>Peserta Mandiri</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-3 h-3 rounded-sm bg-primary inline-block"></span>
+<span>Atasan Langsung</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-3 h-3 rounded-sm bg-secondary inline-block"></span>
+<span>Koordinator Evaluasi</span>
+</div>
+</div>
+</div>
+<!-- Comparative Section Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Section A -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-primary uppercase">Bagian A</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Gap: -0.22</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-1">Penurunan Susut Teknis Manuver 2 Titik</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Eksekusi SOP manuver penyulang dan load balancing trafo distribusi.</p>
+<!-- Bar Graph Simulation Section A -->
+<div class="space-y-3 pt-2">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Peserta (Self)</span>
+<span class="font-bold text-on-surface">3.60</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Atasan Langsung</span>
+<span class="font-bold text-on-surface">3.38</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 84.5%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Koordinator</span>
+<span class="font-bold text-on-surface">3.45</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 86.25%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Skor Tertimbang Modul:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3.48 / 4.00</span>
+</div>
+</div>
+<!-- Section B -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-primary uppercase">Bagian B</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Gap: -0.27</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-1">Penyegaran Operasional &amp; P2TL</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Investigasi anomali metering AMR dan penertiban sambungan ilegal.</p>
+<!-- Bar Graph Simulation Section B -->
+<div class="space-y-3 pt-2">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Peserta (Self)</span>
+<span class="font-bold text-on-surface">3.52</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Atasan Langsung</span>
+<span class="font-bold text-on-surface">3.25</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 81.25%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Koordinator</span>
+<span class="font-bold text-on-surface">3.30</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82.5%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Skor Tertimbang Modul:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3.36 / 4.00</span>
+</div>
+</div>
+<!-- Section C -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-primary uppercase">Bagian C</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Gap: -0.30</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-1">Kalkulasi Susut via PSS SINCAL</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Simulasi aliran daya digital dan optimasi jaringan distribusi radial.</p>
+<!-- Bar Graph Simulation Section C -->
+<div class="space-y-3 pt-2">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Peserta (Self)</span>
+<span class="font-bold text-on-surface">3.58</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 89.5%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Atasan Langsung</span>
+<span class="font-bold text-on-surface">3.34</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 83.5%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-secondary">Koordinator</span>
+<span class="font-bold text-on-surface">3.28</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Skor Tertimbang Modul:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3.40 / 4.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Indicator Competency Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl overflow-hidden">
+<div class="p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Rincian Indikator Kompetensi Perilaku (11 Indikator)</h2>
+<p class="font-body-md text-body-md text-secondary">Agregasi nilai tiap indikator perilaku kerja aktual di lapangan dengan verifikasi bukti eviden.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary">Filter Bagian:</span>
+<button class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">Semua</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-secondary hover:text-on-surface">Bagian A</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-secondary hover:text-on-surface">Bagian B</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-secondary hover:text-on-surface">Bagian C</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-lg font-semibold">Kode &amp; Indikator Perilaku</th>
+<th class="py-3 px-space-md font-semibold">Modul</th>
+<th class="py-3 px-space-md font-semibold text-center">Peserta</th>
+<th class="py-3 px-space-md font-semibold text-center">Atasan</th>
+<th class="py-3 px-space-md font-semibold text-center">Koord</th>
+<th class="py-3 px-space-md font-semibold text-center">Skor Gabungan</th>
+<th class="py-3 px-space-md font-semibold">Status Efektivitas</th>
+<th class="py-3 px-space-lg font-semibold">Bukti Dukung</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">A.1 — Pelaksanaan SOP Manuver Pembebanan</span>
+<span class="text-secondary text-[11px]">Menerapkan mitigasi drop tegangan saat manuver jaringan loop 20kV.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Bagian A</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.65</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.40</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.48</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.51</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 95%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">80/84 (95%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">A.2 — Akurasi Pemetaan Trafo Overload</span>
+<span class="text-secondary text-[11px]">Identifikasi ketidakseimbangan beban antar fasa (R, S, T) ≥ 15%.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Bagian A</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.58</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.35</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.42</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.45</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 91%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">77/84 (91%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">A.3 — Responsivitas Re-konfigurasi Jaringan</span>
+<span class="text-secondary text-[11px]">Kecepatan penyesuaian LBS saat terjadi eskalasi beban puncak siang/malam.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Bagian A</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.56</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.38</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.45</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.46</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 88%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">74/84 (88%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">B.1 — Analisis Anomali Profil Konsumsi AMR</span>
+<span class="text-secondary text-[11px]">Validasi grafik load profile pelanggan potensial &gt; 66kVA yang mencurigakan.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Bagian B</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.50</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.20</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.28</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.33</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm font-semibold text-secondary">
+                Cukup
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 82%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">69/84 (82%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">B.2 — Kepatuhan Prosedur Berita Acara P2TL</span>
+<span class="text-secondary text-[11px]">Dokumentasi bukti fisik, penyegelan ulang, dan penandatanganan saksi.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Bagian B</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.55</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.32</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.35</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.41</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 93%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">78/84 (93%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">B.3 — Penelusuran Arus Hilang (Pemeriksaan CT/PT)</span>
+<span class="text-secondary text-[11px]">Pengujian rasio transformasi dan akurasi kabel pengawatan kWh meter elektronik.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Bagian B</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.48</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.18</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.22</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-on-surface">3.29</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm font-semibold text-secondary">
+                Cukup
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 76%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">64/84 (76%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">C.1 — Pemodelan Topologi Single Line Diagram (SLD)</span>
+<span class="text-secondary text-[11px]">Input data feeder, panjang hantaran, impedansi, dan koneksi trafo di SINCAL.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Bagian C</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.62</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.42</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.36</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.47</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 89%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">75/84 (89%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">C.2 — Eksekusi Load Flow Analysis (Aliran Daya)</span>
+<span class="text-secondary text-[11px]">Simulasi konvergensi Newton-Raphson untuk deteksi bottleneck susut teknis.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Bagian C</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.55</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.30</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.24</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.36</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 83%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">70/84 (83%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 9 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">C.3 — Rekomendasi Pemasangan Kapasitor Bank</span>
+<span class="text-secondary text-[11px]">Penentuan lokasi optimal dan kapasitas kvar untuk reduksi rugi daya reaktif.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Bagian C</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.45</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.12</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.15</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-on-surface">3.24</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container font-label-sm text-label-sm font-semibold text-on-error-container">
+                Perlu Penguatan
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-error" style="width: 68%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">57/84 (68%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 10 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">A.4 — Koordinasi Proteksi OCR &amp; GFR Penyulang</span>
+<span class="text-secondary text-[11px]">Sinkronisasi setting rele arus lebih pasca konfigurasi ulang titik temu penyulang.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Bagian A</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.52</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.34</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.40</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.42</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 86%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">72/84 (86%)</span>
+</div>
+</td>
+</tr>
+<!-- Row 11 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">C.4 — Penyusunan Kajian Teknis Susut Terintegrasi</span>
+<span class="text-secondary text-[11px]">Formulasi laporan hasil perhitungan SAIDI-SAIFI dan rugi kWh per gardu induk.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Bagian C</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.68</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.46</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-semibold">3.32</td>
+<td class="py-3.5 px-space-md text-center font-tabular-data text-tabular-data font-bold text-primary">3.49</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">
+                Tinggi
+              </span>
+</td>
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-16 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 90%;"></div>
+</div>
+<span class="text-[11px] font-tabular-data text-secondary">76/84 (90%)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Segmentasi Hasil per Unit Layanan (ULP) & Verification Notice -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- ULP Comparison Table (2 Cols wide on desktop) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Segmentasi Capaian per Unit Layanan (ULP)</h2>
+<p class="font-body-md text-body-md text-secondary">Distribusi skor efektivitas perilaku kerja berdasarkan unit penugasan di lingkungan UP3 Metro.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-secondary bg-surface-container px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-primary">location_city</span>
+<span>4 ULP Terdaftar</span>
+</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md font-semibold">Unit Layanan Pelanggan</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Partisipan Valid</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Skor Rata-rata</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Kategori</th>
+<th class="py-2.5 px-space-md font-semibold">Status Validasi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- ULP Metro Kota -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm font-semibold">ULP Metro Kota</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center font-tabular-data text-tabular-data">28 Pegawai</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3.48</span>
+<span class="text-[11px] text-secondary"> / 4.0</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">Sangat Efektif</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span>100% Terverifikasi</span>
+</span>
+</td>
+</tr>
+<!-- ULP Bandar Jaya -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm font-semibold">ULP Bandar Jaya</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center font-tabular-data text-tabular-data">24 Pegawai</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3.45</span>
+<span class="text-[11px] text-secondary"> / 4.0</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">Sangat Efektif</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span>100% Terverifikasi</span>
+</span>
+</td>
+</tr>
+<!-- ULP Rumbia -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm font-semibold">ULP Rumbia</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center font-tabular-data text-tabular-data">18 Pegawai</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3.40</span>
+<span class="text-[11px] text-secondary"> / 4.0</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">Sangat Efektif</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span>100% Terverifikasi</span>
+</span>
+</td>
+</tr>
+<!-- ULP Sukadana -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm font-semibold">ULP Sukadana</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center font-tabular-data text-tabular-data">14 Pegawai</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">3.35</span>
+<span class="text-[11px] text-secondary"> / 4.0</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-primary">Efektif</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span>100% Terverifikasi</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Official Certification & Action Panel -->
+<div class="bg-surface-container-low p-space-xl rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Audit &amp; Integritas Data</h3>
+<span class="font-label-sm text-label-sm text-secondary">Metodologi Kirkpatrick Level 3</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+          Seluruh berkas penilaian telah dikomparasikan dengan riwayat operasional AMR dan log manuver SCADA. Skor ini siap dilaporkan ke Manajemen UID Lampung sebagai bukti transfer pelatihan.
+        </p>
+<div class="space-y-2 mb-4 bg-surface-container-lowest p-space-md rounded-lg">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Ketepatan Bukti Eviden:</span>
+<span class="font-bold text-on-surface">94.2%</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Tingkat Triangulasi:</span>
+<span class="font-bold text-on-surface">Lengkap (3/3 Aktor)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Otoritas Validasi:</span>
+<span class="font-bold text-primary">Tim Evaluasi Diklat UP3</span>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-2.5 px-4 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-lg hover:bg-on-primary-container transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Kunci Hasil &amp; Terbitkan Laporan</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for Export and Filter triggers
+  document.getElementById('btn-export-excel')?.addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[17px] animate-spin">refresh</span><span>Memproses XLSX...</span>';
+    setTimeout(() => {
+      this.innerHTML = originalText;
+      alert('Data analitik evaluasi Level 3 UP3 Metro berhasil diunduh dalam format Excel (.xlsx).');
+    }, 900);
+  });
+
+  document.getElementById('btn-export-pdf')?.addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Menyusun Dokumen PDF...</span>';
+    setTimeout(() => {
+      this.innerHTML = originalText;
+      alert('Dokumen ringkasan eksekutif Hasil Evaluasi Level 3 Semester I 2024 siap dicetak.');
+    }, 1100);
+  });
+</script></main></div></body></html>

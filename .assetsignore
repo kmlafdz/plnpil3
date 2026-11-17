@@ -1,0 +1,33 @@
+# wrangler & environment files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+.gitignore
+.git
+.DS_Store
+.npmrc
+
+# backend & server scripts (NEVER expose to Cloudflare static assets)
+server.js
+db.js
+package.json
+package-lock.json
+wrangler.jsonc
+run-strix.sh
+strix_instructions.md
+scripts
+scratch
+preferensi
+
+# docs & non-web files
+*.md
+*.xlsx
+*.sql
+*.log
+
+# worker overrides
+/_worker.js
+/_routes.json
+/functions

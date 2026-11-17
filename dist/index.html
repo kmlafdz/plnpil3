@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluasi Level 3 — PLN Impact Lab (PIL)</title>
+  <meta name="description" content="Evaluasi Level 3 — PLN Impact Lab (PIL): Platform manajemen evaluasi implementasi perilaku kerja pasca diklat berbasis asesmen Tri-Perspektif PT PLN (Persero).">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Typography: Inter & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#eff4ff",
+            "surface-container": "#e5eeff",
+            "surface-container-high": "#dce9ff",
+            "surface-container-highest": "#d3e4fe",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#f8f9ff",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#3c494c",
+            "primary": "#006876",
+            "primary-container": "#23c4db",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#004d57",
+            "secondary": "#4d6171",
+            "secondary-container": "#d0e5f9",
+            "outline": "#6c797c",
+            "outline-variant": "#bbc9cc",
+            "brand-navy": "#172B3A",
+            "electric-cyan": "#23C4DB",
+            "deep-cyan": "#0F96A9"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-[#F5F7F9] text-[#172B3A] antialiased">
+
+  <!-- =========================================================================
+       INTRO SPLASH SCREEN ANIMATION (PLN Corporate University)
+       ========================================================================= -->
+  <div id="pln-intro-splash" class="pln-intro-overlay" role="dialog" aria-modal="true" aria-label="Intro PT PLN (Persero)">
+    <!-- Ambient Energy Grid Background -->
+    <div class="pln-intro-ambient">
+      <div class="pln-intro-ambient-glow"></div>
+      <div class="pln-intro-ambient-particles"></div>
+      <div class="pln-intro-grid-pattern"></div>
+    </div>
+
+    <!-- Central Stage: True Centered & Slightly Enlarged -->
+    <div class="pln-intro-stage">
+      
+      <!-- Energy Aura Ripple behind Logo -->
+      <div class="pln-intro-aura">
+        <span class="pln-aura-ring pln-aura-ring-1"></span>
+        <span class="pln-aura-ring pln-aura-ring-2"></span>
+      </div>
+
+      <!-- Logo Container with Elegant Shield & Subtle Motion -->
+      <div class="pln-intro-logo-wrap">
+        <div class="pln-intro-logo-shield">
+          <div class="pln-intro-logo-shine"></div>
+          <img src="/logo.png" alt="Logo PT PLN (Persero)" class="pln-intro-logo-img" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png';" />
+        </div>
+      </div>
+
+      <!-- Brand Identity Typography -->
+      <div class="pln-intro-text-group">
+        <!-- Main Company Title -->
+        <div class="pln-intro-title-wrap">
+          <h1 class="pln-intro-company-title">PT PLN (PERSERO)</h1>
+          <div class="pln-intro-title-line">
+            <span class="pln-title-line-left"></span>
+            <span class="pln-title-sparkle material-symbols-outlined">bolt</span>
+            <span class="pln-title-line-right"></span>
+          </div>
+        </div>
+
+        <!-- Subtitle: Pusat Pendidikan dan Pelatihan -->
+        <p class="pln-intro-pusat-diklat">Pusat Pendidikan dan Pelatihan</p>
+        
+        <!-- Corporate Sub-badge -->
+        <div class="pln-intro-corpu-badge">
+          <span>PLN CORPORATE UNIVERSITY • IMPACT LAB</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div id="sidebar-mobile-backdrop" class="fixed inset-0 bg-[#0B1C30]/60 backdrop-blur-sm z-35 hidden transition-opacity lg:hidden" aria-hidden="true"></div>
+
+  <!-- Container Halaman Login (Tampil saat belum terotentikasi) -->
+  <div id="login-container" class="hidden"></div>
+
+  <!-- Shell Utama Aplikasi (Tampil saat sudah login) -->
+  <div id="app-layout" class="app-layout hidden">
+    
+    <!-- Sidebar Persisten (260px di desktop, slide drawer di mobile) -->
+    <aside id="sidebar-main" class="sidebar-fixed shadow-md flex flex-col h-screen overflow-hidden">
+      
+      <!-- Top Branding & User Info (Pinned at top) -->
+      <div class="shrink-0">
+        <!-- Unit Branding & Logo -->
+        <div class="p-3.5 border-b border-[#1E384D] flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5 overflow-hidden">
+            <div class="h-9 w-9 rounded bg-white flex items-center justify-center p-1 shadow-sm shrink-0">
+              <img src="/logo.png" alt="PLN Logo" class="h-7 w-auto object-contain" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png';" />
+            </div>
+            <div class="overflow-hidden">
+              <div class="text-xs font-bold text-white tracking-wide uppercase leading-tight truncate">
+                Evaluasi Level 3
+              </div>
+              <div class="text-[10px] text-[#23C4DB] font-semibold truncate leading-tight">
+                PLN Impact Lab (PIL)
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Tutup Sidebar Mobile -->
+          <button id="btn-close-sidebar-mobile" class="lg:hidden p-1 text-[#94A3B8] hover:text-white rounded transition-colors" aria-label="Tutup Menu">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Session Status Pill -->
+        <div class="px-3.5 py-1.5 bg-[#102331] border-b border-[#1E384D] flex items-center justify-between text-[11px]">
+          <span class="text-[#94A3B8] font-mono text-[10px]">#EV3-MTR-2024.1</span>
+          <span class="text-[#23C4DB] font-semibold text-[10px] uppercase tracking-wider">
+            Siklus 2026
+          </span>
+        </div>
+
+        <!-- User Role Badge in Sidebar -->
+        <div id="sidebar-user-badge" class="px-3.5 py-2.5 bg-[#132A3D] border-b border-[#1E384D] flex items-center gap-2.5 cursor-pointer hover:bg-[#1A384F] transition-colors" title="Klik untuk mengubah avatar / foto profil">
+          <div id="sidebar-user-avatar" class="w-8 h-8 rounded-full bg-[#23C4DB] text-[#172B3A] font-bold text-xs flex items-center justify-center shrink-0 overflow-hidden ring-1 ring-white/20">
+            U
+          </div>
+          <div class="overflow-hidden flex-1">
+            <div id="sidebar-user-name" class="text-xs font-semibold text-white truncate leading-tight">
+              Pengguna
+            </div>
+            <div id="sidebar-user-role" class="text-[10px] text-[#23C4DB] truncate font-medium leading-tight">
+              Administrator
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[16px] text-[#64748B] hover:text-[#23C4DB] transition-colors shrink-0" title="Ubah Avatar">photo_camera</span>
+        </div>
+      </div>
+
+      <!-- Main Navigation Links (Scrollable middle container) -->
+      <div class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden sidebar-scrollable">
+        <nav id="sidebar-nav-container" class="py-2 space-y-0.5">
+          <div class="px-4 py-1.5 text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
+            Menu Utama
+          </div>
+          
+          <a href="/plncorpuadmin/dashboard" class="nav-link-item active" data-view="dashboard">
+            <span class="material-symbols-outlined text-[18px]">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="/plncorpuadmin/peserta" class="nav-link-item" data-view="peserta-list">
+            <span class="material-symbols-outlined text-[18px]">group</span>
+            <span>Peserta</span>
+          </a>
+
+          <a href="/plncorpuadmin/atasan" class="nav-link-item" data-view="atasan-list">
+            <span class="material-symbols-outlined text-[18px]">supervisor_account</span>
+            <span>Atasan</span>
+          </a>
+
+          <a href="/plncorpuadmin/koordinator" class="nav-link-item" data-view="koordinator-list">
+            <span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+            <span>Koordinator</span>
+          </a>
+
+          <a href="/plncorpuadmin/penugasan" class="nav-link-item" data-view="penugasan">
+            <span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+            <span>Penugasan Penilai</span>
+          </a>
+
+          <a href="/plncorpuadmin/progres" class="nav-link-item" data-view="progres">
+            <span class="material-symbols-outlined text-[18px]">donut_large</span>
+            <span>Progres Pengisian</span>
+          </a>
+
+          <a href="/plncorpuadmin/hasil" class="nav-link-item" data-view="hasil">
+            <span class="material-symbols-outlined text-[18px]">analytics</span>
+            <span>Hasil Evaluasi</span>
+          </a>
+
+          <div class="px-4 pt-3 pb-1.5 text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
+            Master Administrator
+          </div>
+
+          <a href="/plncorpuadmin/organisasi" class="nav-link-item" data-view="admin-organisasi">
+            <span class="material-symbols-outlined text-[18px]">account_balance</span>
+            <span>Master Organisasi (UPDL & Unit)</span>
+          </a>
+
+          <a href="/plncorpuadmin/users" class="nav-link-item" data-view="admin-users">
+            <span class="material-symbols-outlined text-[18px]">group</span>
+            <span>Data Pengguna / Akun User</span>
+          </a>
+
+          <a href="/plncorpuadmin/program" class="nav-link-item" data-view="admin-program">
+            <span class="material-symbols-outlined text-[18px]">school</span>
+            <span>Program & Periode</span>
+          </a>
+
+          <a href="/plncorpuadmin/bank-butir" class="nav-link-item" data-view="admin-bank-butir">
+            <span class="material-symbols-outlined text-[18px]">fact_check</span>
+            <span>Bank Butir Evaluasi</span>
+          </a>
+
+          <a href="/plncorpuadmin/form-builder" class="nav-link-item" data-view="admin-form-builder">
+            <span class="material-symbols-outlined text-[18px]">tune</span>
+            <span>Form Builder (3 Perspektif)</span>
+          </a>
+
+          <div class="px-4 pt-3 pb-1.5 text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
+            Laporan & Pengaturan
+          </div>
+
+          <a href="/plncorpuadmin/laporan" class="nav-link-item" data-view="laporan">
+            <span class="material-symbols-outlined text-[18px]">bar_chart</span>
+            <span>Laporan & Ekspor</span>
+          </a>
+
+          <a href="/plncorpuadmin/pengaturan" class="nav-link-item" data-view="pengaturan">
+            <span class="material-symbols-outlined text-[18px]">settings</span>
+            <span>Pengaturan</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Sidebar Footer with Logout Button (Pinned at bottom) -->
+      <div class="shrink-0 p-3 border-t border-[#1E384D] bg-[#102331] text-[11px] text-[#94A3B8] space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-white font-medium text-[11px]">PLN CorpU • Level 3</span>
+          <span class="font-mono text-[10px] text-[#23C4DB]">v1.0.0</span>
+        </div>
+        <button id="btn-sidebar-logout" class="w-full flex items-center justify-center gap-1.5 py-1.5 px-2 rounded bg-white/5 hover:bg-[#FEF2F2] hover:text-[#DC2626] text-[#CBD5E1] transition-all text-xs font-medium">
+          <span class="material-symbols-outlined text-[16px]">logout</span>
+          Keluar dari Sesi
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- Main Viewport Area -->
+    <div class="main-viewport">
+      
+      <!-- Topbar Header (56px) -->
+      <header class="topbar-fixed">
+        <div class="flex items-center gap-2 sm:gap-3 overflow-hidden">
+          <!-- Tombol Hamburger Mobile -->
+          <button id="btn-mobile-sidebar-toggle" class="lg:hidden p-1.5 -ml-1 text-[#172B3A] hover:bg-[#F1F5F9] rounded-lg transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
+            <span class="material-symbols-outlined text-[22px] block">menu</span>
+          </button>
+          
+          <div class="flex items-center gap-2 overflow-hidden truncate">
+            <span class="text-xs font-semibold text-[#0F96A9] hidden sm:inline truncate">Evaluasi Level 3</span>
+            <span class="text-xs text-[#CBD5E1] hidden sm:inline">/</span>
+            <span id="topbar-breadcrumb" class="text-xs font-semibold text-[#172B3A] truncate">Dashboard Administrator</span>
+          </div>
+        </div>
+
+        <!-- Right Header Items -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          
+          <!-- Live Sync Status -->
+          <div id="live-sync-badge" class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ECFDF5] border border-[#A7F3D0] text-[11px] text-[#065F46] font-medium transition-all">
+            <span id="live-sync-icon" class="material-symbols-outlined text-[13px] text-[#059669]">cloud_done</span>
+            <span id="live-sync-text">Terkoneksi Database</span>
+          </div>
+
+          <!-- User Profile -->
+          <div class="flex items-center pl-2 border-l border-[#CBD5E1] relative">
+            <button type="button" id="topbar-user-badge" class="flex items-center gap-2 cursor-pointer p-1.5 rounded-lg hover:bg-[#F1F5F9] transition-colors focus:outline-none" title="Menu Akun & Sesi" aria-expanded="false" aria-haspopup="true">
+              <div id="topbar-user-avatar" class="w-7 h-7 rounded-full bg-[#172B3A] text-white flex items-center justify-center font-bold text-xs shrink-0 overflow-hidden ring-1 ring-[#CBD5E1]">
+                U
+              </div>
+              <div class="hidden lg:block text-left">
+                <div id="topbar-user-name" class="text-xs font-semibold text-[#172B3A] leading-tight">UP3 Metro</div>
+                <div id="topbar-user-role" class="text-[10px] text-[#64748B] leading-tight">Admin Unit</div>
+              </div>
+              <span id="topbar-user-chevron" class="material-symbols-outlined text-[18px] text-[#64748B] transition-transform duration-200">expand_more</span>
+            </button>
+
+            <!-- Pop up / Dropdown Menu Logout -->
+            <div id="topbar-user-dropdown" class="hidden absolute right-0 top-full mt-2 w-72 bg-white rounded-xl shadow-2xl border border-[#CBD5E1] py-2 z-50 animate-fadeIn divide-y divide-[#E2E8F0]">
+              <!-- User Brief Summary in Pop-up -->
+              <div class="px-4 py-3 flex items-center gap-3 bg-[#F8FAFC]">
+                <div id="dropdown-user-avatar" class="w-10 h-10 rounded-full bg-[#172B3A] text-white flex items-center justify-center font-bold text-sm shrink-0 overflow-hidden ring-2 ring-[#23C4DB]">
+                  U
+                </div>
+                <div class="overflow-hidden min-w-0">
+                  <div id="dropdown-user-name" class="text-xs font-bold text-[#172B3A] truncate leading-tight">UP3 Metro</div>
+                  <div id="dropdown-user-role" class="text-[11px] text-[#006876] font-semibold truncate leading-tight mt-0.5">Admin Unit</div>
+                  <div id="dropdown-user-unit" class="text-[10px] text-[#64748B] truncate leading-tight mt-0.5">PLN UP3 Metro</div>
+                </div>
+              </div>
+
+              <!-- Menu Items -->
+              <div class="py-1">
+                <button type="button" id="btn-dropdown-settings" class="w-full text-left px-4 py-2 text-xs text-[#172B3A] hover:bg-[#F1F5F9] flex items-center gap-2.5 transition-colors cursor-pointer">
+                  <span class="material-symbols-outlined text-[18px] text-[#006876]">settings</span>
+                  <div>
+                    <div class="font-medium">Pengaturan Sistem</div>
+                    <div class="text-[10px] text-[#64748B]">Kelola profil, sandi &amp; parameter</div>
+                  </div>
+                </button>
+                <button type="button" id="btn-dropdown-avatar" class="w-full text-left px-4 py-2 text-xs text-[#172B3A] hover:bg-[#F1F5F9] flex items-center gap-2.5 transition-colors cursor-pointer">
+                  <span class="material-symbols-outlined text-[18px] text-[#006876]">account_circle</span>
+                  <div>
+                    <div class="font-medium">Ubah Foto Profil</div>
+                    <div class="text-[10px] text-[#64748B]">Perbarui avatar akun Anda</div>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Logout Button Action -->
+              <div class="pt-1 pb-0.5">
+                <button type="button" id="btn-topbar-logout" class="w-full text-left px-4 py-2.5 text-xs text-[#DC2626] hover:bg-[#FEF2F2] flex items-center gap-2.5 font-bold transition-colors">
+                  <span class="material-symbols-outlined text-[18px] text-[#DC2626]">logout</span>
+                  <div>
+                    <div>Keluar dari Sesi (Logout)</div>
+                    <div class="text-[10px] text-[#EF4444] font-normal">Akhiri sesi login portal ini</div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Main Content Dynamic Container -->
+      <main id="main-content-area" class="content-container pb-28 lg:pb-20">
+        <!-- Rendered by JS router -->
+      </main>
+
+    </div>
+
+    <!-- Mobile Bottom Navigation (khusus Peserta di mobile) -->
+    <nav id="mobile-bottom-nav" class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-[#CBD5E1] z-30 shadow-lg px-3 py-2 flex items-center justify-around hidden">
+      <button type="button" class="mobile-nav-btn flex flex-col items-center justify-center py-1 px-3 rounded-lg text-[#64748B] hover:text-[#006876] transition-colors" data-view="peserta-beranda">
+        <span class="material-symbols-outlined text-[22px]">home</span>
+        <span class="text-[10px] font-semibold tracking-tight">Beranda</span>
+      </button>
+      <button type="button" class="mobile-nav-btn flex flex-col items-center justify-center py-1 px-3 rounded-lg text-[#64748B] hover:text-[#006876] transition-colors" data-view="formulir">
+        <span class="material-symbols-outlined text-[22px]">edit_document</span>
+        <span class="text-[10px] font-semibold tracking-tight">Formulir</span>
+      </button>
+      <button type="button" id="btn-mobile-bottom-logout" class="mobile-nav-btn flex flex-col items-center justify-center py-1 px-3 rounded-lg text-[#DC2626] hover:bg-[#FEF2F2] transition-colors">
+        <span class="material-symbols-outlined text-[22px]">logout</span>
+        <span class="text-[10px] font-semibold tracking-tight">Keluar</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Firebase App SDK (v9 compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
+  <script>
+    // Firebase Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyARL_I3DbHgvbfg0LV3mPvObdl9TCNcV1M",
+      authDomain: "plncorpu.firebaseapp.com",
+      projectId: "plncorpu",
+      storageBucket: "plncorpu.firebasestorage.app",
+      messagingSenderId: "838495255167",
+      appId: "1:838495255167:web:4f0a463252961782285d4a",
+      measurementId: "G-GZ12W39S25"
+    };
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+    window.firebaseAuth = firebase.auth();
+    window.firebaseDb = firebase.firestore();
+    window.db = window.firebaseDb;
+  </script>
+
+  <!-- SheetJS Library for Excel (XLSX) Parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="/js/data.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/vendor/simplewebauthn-browser.min.js"></script>
+  <script src="/js/face_auth.js?v=3.0"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/avatar.js"></script>
+  <script src="/js/views/login.js"></script>
+  <script src="/js/views/dashboard.js"></script>
+  <script src="/js/views/peserta_list.js"></script>
+  <script src="/js/views/atasan_list.js"></script>
+  <script src="/js/views/koordinator_list.js"></script>
+  <script src="/js/views/penugasan.js"></script>
+  <script src="/js/views/progres.js"></script>
+  <script src="/js/views/hasil.js"></script>
+  <script src="/js/views/peserta_beranda.js"></script>
+  <script src="/js/views/evaluator_beranda.js"></script>
+  <script src="/js/views/formulir.js"></script>
+  <script src="/js/views/admin_organisasi.js"></script>
+  <script src="/js/views/admin_users.js"></script>
+  <script src="/js/views/admin_program.js"></script>
+  <script src="/js/views/admin_bank_butir.js"></script>
+  <script src="/js/views/admin_form_builder.js"></script>
+  <script src="/js/views/laporan.js"></script>
+  <script src="/js/views/pengaturan.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
